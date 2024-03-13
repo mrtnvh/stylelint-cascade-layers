@@ -1,0 +1,41 @@
+{
+  "name": "stylelint-cascade-layers",
+  "description": "Stylelint plugin to enforce usage of cascade layers",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "npm run build -- -w",
+    "build": "pkgroll",
+    "lint": "./node_modules/stylelint/bin/stylelint.mjs -c src/__tests__/stylelint.test.config.cjs src/__tests__/*.css",
+    "test": "node --import tsx --test ./src/**/*.test.ts",
+    "test:watch": "node --test --watch"
+  },
+  "peerDependencies": {
+    "stylelint": "^15.11.0"
+  },
+  "devDependencies": {
+    "@matteo.collina/snap": "^0.2.1",
+    "@types/node": "^20.11.26",
+    "pkgroll": "^2.0.2",
+    "stylelint": "^15.11.0",
+    "stylelint-16": "npm:stylelint@^16.2.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "volta": {
+    "node": "20.8.0"
+  }
+}

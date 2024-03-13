@@ -1,0 +1,69 @@
+@layer components {
+  .component {
+    color: #aaa;
+  }
+}
+
+@layer base {
+  @layer components {
+    @layer variables {
+      .component {
+        color: #aaa;
+
+        .nested-component {
+          background-color: #c0ffee;
+        }
+
+        & a {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+/* Ignore at rules */
+@font-face {
+  font-family: "TestFont";
+  src: url("./test-font.woff");
+}
+
+@font-feature-values Font One {
+  @styleset {
+    nice-style: 12;
+  }
+}
+
+@font-palette-values --identifier {
+  font-family: Bixa;
+}
+
+@charset "utf-8";
+
+@import url("import.css");
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@property --property-name {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #c0ffee;
+}
