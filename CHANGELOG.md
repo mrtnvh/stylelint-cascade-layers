@@ -3,6 +3,7 @@
 * Initial commit ([61a7839](https://github.com/mrtnvh/stylelint-cascade-layers/commit/61a7839))
 * docs: update changelog ([f0cc709](https://github.com/mrtnvh/stylelint-cascade-layers/commit/f0cc709))
 * ci: add main flow ([55e18c7](https://github.com/mrtnvh/stylelint-cascade-layers/commit/55e18c7))
+* ci: add release and changelog generation ([9a3fb8b](https://github.com/mrtnvh/stylelint-cascade-layers/commit/9a3fb8b))
 
 
 
