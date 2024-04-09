@@ -14,14 +14,17 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "dev": "npm run build -- -w",
     "build": "pkgroll",
     "lint": "./node_modules/stylelint/bin/stylelint.mjs -c src/__tests__/stylelint.test.config.cjs src/__tests__/*.css",
     "test": "node --import tsx --test ./src/**/*.test.ts",
-    "test:watch": "node --test --watch"
+    "test:watch": "node --test --watch",
+    "changelog": "npx conventional-changelog-cli -i CHANGELOG.md -sa",
+    "release": "np"
   },
   "peerDependencies": {
     "stylelint": "^15.11.0"
@@ -29,6 +32,8 @@
   "devDependencies": {
     "@matteo.collina/snap": "^0.2.1",
     "@types/node": "^20.11.26",
+    "conventional-changelog-cli": "^4.1.0",
+    "np": "^10.0.3",
     "pkgroll": "^2.0.2",
     "stylelint": "^15.11.0",
     "stylelint-16": "npm:stylelint@^16.2.1",
