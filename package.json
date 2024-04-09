@@ -1,7 +1,7 @@
 {
   "name": "stylelint-cascade-layers",
   "description": "Stylelint plugin to enforce usage of cascade layers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "exports": {
     "require": {
