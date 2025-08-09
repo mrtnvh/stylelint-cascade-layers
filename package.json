@@ -40,7 +40,7 @@
     "release": "np"
   },
   "peerDependencies": {
-    "stylelint": "^15.11.0"
+    "stylelint": "^15.11.0 || ^16"
   },
   "devDependencies": {
     "@matteo.collina/snap": "^0.3.0",
